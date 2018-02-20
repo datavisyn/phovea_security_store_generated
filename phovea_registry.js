@@ -12,5 +12,6 @@ import {
  * build a registry by registering all phovea modules
  */
 //other modules
+import 'phovea_security_flask/phovea_registry.js';
 //self
 register('phovea_security_store_generated', require('./phovea.js'));

@@ -10,7 +10,7 @@ module.exports = function(registry) {
   // generator-phovea:begin
 
   registry.push('securityCustomizedLoginForm', 'generated', function() { return import('./src'); }, {
-    template: require('html-loader!./_loginForm.html')
+    template: require('html-loader!./src/_loginForm.html')
   });
   // generator-phovea:end
 };

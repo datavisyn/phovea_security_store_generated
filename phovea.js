@@ -8,6 +8,10 @@
 module.exports = function(registry) {
   //registry.push('extension-type', 'extension-id', function() { return import('./src/extension_impl'); }, {});
   // generator-phovea:begin
+
+  registry.push('securityCustomizedLoginForm', 'generated', function() { return import('./src'); }, {
+    template: require('html-loader!./_loginForm.html')
+  });
   // generator-phovea:end
 };
 

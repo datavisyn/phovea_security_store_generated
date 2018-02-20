@@ -1,11 +1,7 @@
-import * as loginFormT from 'html-loader!./_loginForm.html';
-
 import * as DockerName from 'docker-names';
 import {randomId} from 'phovea_core/src';
 
-export const loginForm = String(loginFormT);
-
-export default function initRandomUserProvider() {
+export function create(_menu: HTMLElement, dialog: HTMLElement) {
   // generate random username
   const cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)randomCredentials\s*=\s*([^;]*).*$)|^.*$/, '$1');
 
@@ -19,6 +15,6 @@ export default function initRandomUserProvider() {
   const maxAge = 2 * 7 * 24 * 60 * 60; // 2 weeks in seconds
   document.cookie = `randomCredentials=${username}@${password};max-age=${maxAge}`;
 
-  (<HTMLInputElement>document.querySelector('input#login_username')).value = username;
-  (<HTMLInputElement>document.querySelector('input#login_password')).value = password;
+  (<HTMLInputElement>dialog.querySelector('input#login_username')).value = username;
+  (<HTMLInputElement>dialog.querySelector('input#login_password')).value = password;
 }

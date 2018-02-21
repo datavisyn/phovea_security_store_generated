@@ -190,7 +190,8 @@ function generateWebpack(options) {
         __TEST__: options.isTest,
         __PRODUCTION__: options.isProduction,
         __APP_CONTEXT__: JSON.stringify('/')
-      })
+      }),
+      new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true })
       // rest depends on type
     ],
     externals: [],

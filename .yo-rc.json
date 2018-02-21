@@ -9,19 +9,15 @@
     "name": "phovea_security_store_generated",
     "author": "Samuel Gratzl",
     "today": "Tue, 06 Jun 2017 07:34:54 GMT",
-    "githubAccount": "Caleydo",
+    "githubAccount": "datavisyn",
     "sextensions": [],
-    "app": "phovea_security_store_generated",
-    "clientOnly": false,
-    "entries": {
-      "app": "./src/index.ts"
-    },
     "unknown": {
       "requirements": [],
       "dockerPackages": []
     },
     "ignores": [],
     "extensions": [],
-    "libraries": []
+    "libraries": [],
+    "entries": "./index.js"
   }
 }

@@ -47,7 +47,7 @@
     "test:python": "test ! -d tests || python setup.py test",
     "prebuild:python": "node -e \"process.exit(process.env.PHOVEA_SKIP_TESTS === undefined?1:0)\" || npm run test:python",
     "prebuild:web": "node -e \"process.exit(process.env.PHOVEA_SKIP_TESTS === undefined?1:0)\" || npm run test:web",
-    "build:python": "python build.py",
+    "build:python": "rm -rf build/source && find . -name '*.pyc' -delete && node buildPython.js && cp -r ./phovea_security_store_generated build/source/",
     "build:web": "webpack --env prod",
     "predist:web": "npm run build:web && npm run docs:web",
     "predist:python": "npm run build:python && npm run docs:python",
@@ -71,6 +71,7 @@
     "phovea_security_flask": "github:phovea/phovea_security_flask#develop",
     "docker-names": "1.0.3"
   },
+  "main": "build/phovea_security_store_generated.js",
   "devDependencies": {
     "@types/jasmine": "2.5.41",
     "awesome-typescript-loader": "3.0.3",

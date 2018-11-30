@@ -5,7 +5,7 @@
   "version": "5.0.0",
   "author": {
     "name": "Samuel Gratzl",
-    "email": "samuel_gratzl@gmx.at"
+    "email": "sam@sgratzl.com"
   },
   "license": "MPL",
   "bugs": {
@@ -28,7 +28,7 @@
     "build": "npm run build:web && npm run build:python",
     "dist": "npm run dist:web && npm run dist:python",
     "compile": "tsc",
-    "lint": "tslint -c tslint.json src/**.ts tests/**.ts",
+    "lint": "tslint -c tslint.json -p .",
     "posttest": "echo hybrid",
     "test:watch": "karma start --autoWatch=true --singleRun=false",
     "build:dev": "webpack",
@@ -68,7 +68,7 @@
     "docker_packages.txt"
   ],
   "dependencies": {
-    "phovea_security_flask": "github:phovea/phovea_security_flask#develop",
+    "phovea_security_flask": "^2.1.0",
     "docker-names": "1.0.3"
   },
   "main": "build/phovea_security_store_generated.js",

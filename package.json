@@ -2,7 +2,7 @@
   "name": "phovea_security_store_generated",
   "description": "",
   "homepage": "https://phovea.caleydo.org",
-  "version": "5.0.0",
+  "version": "5.0.1-SNAPSHOT",
   "author": {
     "name": "Samuel Gratzl",
     "email": "sam@sgratzl.com"

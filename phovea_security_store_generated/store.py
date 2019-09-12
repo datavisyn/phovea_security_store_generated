@@ -18,7 +18,7 @@ _log = logging.getLogger(__name__)
 
 
 def hash_password(password, salt):
-  return hashlib.sha512(password + salt).hexdigest()
+  return hashlib.sha512((password + salt).encode('utf-8')).hexdigest()
 
 
 def ensure_dir(path):
@@ -116,7 +116,7 @@ INSERT INTO user(username, password, salt, roles, creation_date, last_login_date
 
   def _add_user(self, username, password):
     salt = uuid.uuid4().hex
-    hashed_password = hashlib.sha512(password + salt).hexdigest()
+    hashed_password = hashlib.sha512((password + salt).encode('utf-8')).hexdigest()
     user = FakeUser(username, hashed_password, salt, [username])
     self._users.append(user)
     _log.info('registering new user: ' + username)

@@ -4,7 +4,8 @@
   "version": "5.0.1-SNAPSHOT",
   "author": {
     "name": "datavisyn",
-    "email": "contact@datavisyn.io"
+    "email": "contact@datavisyn.io",
+    "url": "https://www.datavisyn.io"
   },
   "license": "MPL",
   "homepage": "https://phovea.caleydo.org",

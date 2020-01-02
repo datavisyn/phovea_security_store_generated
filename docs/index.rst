@@ -1,9 +1,9 @@
-.. ordino documentation master file, created by
+.. phovea_security_store_generated documentation master file, created by
    sphinx-quickstart on Tue Feb  7 19:42:32 2017.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to ordino's documentation!
+Welcome to phovea_security_store_generated's documentation!
 =========================================
 
 .. toctree::

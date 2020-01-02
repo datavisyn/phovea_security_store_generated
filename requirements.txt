@@ -1,2 +1,2 @@
--e git+https://github.com/datavisyn/phovea_server.git@develop#egg=phovea_server
+-e git+https://github.com/phovea/phovea_server.git@develop#egg=phovea_server
 -e git+https://github.com/datavisyn/phovea_security_flask.git@develop#egg=phovea_security_flask

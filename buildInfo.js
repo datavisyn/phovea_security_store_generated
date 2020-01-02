@@ -139,7 +139,7 @@ function resolveScreenshot() {
   if (!fs.existsSync(f)) {
     return null;
   }
-  const buffer = new Buffer(fs.readFileSync(f)).toString('base64');
+  const buffer = Buffer.from(fs.readFileSync(f)).toString('base64');
   return `data:image/png;base64,${buffer}`;
 }
 
@@ -150,6 +150,7 @@ function metaData(pkg) {
     displayName: pkg.displayName,
     version: pkg.version,
     repository: pkg.repository.url,
+    homepage: pkg.homepage,
     description: pkg.description,
     screenshot: resolveScreenshot()
   };

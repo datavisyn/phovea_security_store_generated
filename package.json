@@ -69,7 +69,7 @@
     "docker_packages.txt"
   ],
   "dependencies": {
-    "phovea_security_flask": "github:phovea/phovea_security_flask#typescript_3.8",
+    "phovea_security_flask": "github:phovea/phovea_security_flask#update_dependencies_38",
     "docker-names": "1.0.3"
   },
   "main": "build/phovea_security_store_generated.js",

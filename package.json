@@ -70,7 +70,7 @@
   ],
   "dependencies": {
     "phovea_security_flask": "github:phovea/phovea_security_flask#update_dependencies_38",
-    "docker-names": "1.0.3"
+    "docker-names": "1.1.1"
   },
   "main": "build/phovea_security_store_generated.js",
   "engines": {

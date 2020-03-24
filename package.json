@@ -1,7 +1,7 @@
 {
   "name": "phovea_security_store_generated",
   "description": "",
-  "version": "7.0.0",
+  "version": "7.1.0",
   "author": {
     "name": "datavisyn",
     "email": "contact@datavisyn.io",
@@ -16,7 +16,7 @@
     "type": "git",
     "url": "https://github.com/datavisyn/phovea_security_store_generated.git"
   },
-  "private": true,
+  "private": false,
   "scripts": {
     "predist": "echo hybrid",
     "predocker": "npm run build",

@@ -7,7 +7,7 @@
     "email": "contact@datavisyn.io",
     "url": "https://www.datavisyn.io"
   },
-  "license": "MPL",
+  "license": "BSD-3-Clause",
   "homepage": "https://phovea.caleydo.org",
   "bugs": {
     "url": "https://github.com/datavisyn/phovea_security_store_generated/issues"

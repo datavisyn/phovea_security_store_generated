@@ -71,8 +71,8 @@
     "docker_packages.txt"
   ],
   "dependencies": {
-    "phovea_security_flask": "github:phovea/phovea_security_flask#develop",
-    "docker-names": "1.1.1"
+    "docker-names": "1.1.1",
+    "phovea_security_flask": "github:phovea/phovea_security_flask#vstoiber/refactoring"
   },
   "main": "build/phovea_security_store_generated.js",
   "engines": {

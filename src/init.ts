@@ -1,12 +1,12 @@
 import * as DockerName from 'docker-names';
-import {randomId} from 'phovea_core/src';
+import {BaseUtils} from 'phovea_core';
 
 export function create(_menu: HTMLElement, dialog: HTMLElement) {
   // generate random username
   const cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)randomCredentials\s*=\s*([^;]*).*$)|^.*$/, '$1');
 
   let username = DockerName.getRandomName();
-  let password = randomId(6);
+  let password = BaseUtils.randomId(6);
   if (cookieValue) {
     // restore old value
     [username, password] = cookieValue.split('@');

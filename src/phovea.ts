@@ -10,8 +10,8 @@ export default function (registry: IRegistry) {
   //registry.push('extension-type', 'extension-id', function() { return import('./src/extension_impl'); }, {});
   // generator-phovea:begin
 
-  registry.push('securityCustomizedLoginForm', 'generated', function() { return import('.'); }, {
-    template: import('./templates/_loginForm.html')
+  registry.push('securityCustomizedLoginForm', 'generated', function() { return import('./main/LoginCredentials').then((l) => l.LoginCredentials); }, {
+    template: require('./templates/_loginForm.html')
   });
   // generator-phovea:end
 }

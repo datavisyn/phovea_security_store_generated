@@ -18,8 +18,7 @@
   },
   "private": false,
   "scripts": {
-    "clean": "rimraf dist lib && npm run clean:compile",
-    "clean:compile": "rimraf src/**/*.map src/**/*.js src/**/*.d.ts tests/**/*.js tests/**/*.map tests/**/*.d.ts demo/**/*.js demo/**/*.map demo/**/*.d.ts",
+    "clean": "rimraf dist lib",
     "predist": "echo hybrid",
     "predocker": "npm run build",
     "docker": "docker build -t phovea_security_store_generated -f deploy/Dockerfile .",

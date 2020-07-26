@@ -19,6 +19,7 @@
   "private": false,
   "scripts": {
     "clean": "rimraf dist lib",
+    "delete-dependencies": "rimraf node_modules",
     "predist": "echo hybrid",
     "predocker": "npm run build",
     "docker": "docker build -t phovea_security_store_generated -f deploy/Dockerfile .",
@@ -69,7 +70,7 @@
   ],
   "dependencies": {
     "docker-names": "1.1.1",
-    "phovea_security_flask": "github:phovea/phovea_security_flask#vstoiber/refactoring"
+    "phovea_security_flask": "github:phovea/phovea_security_flask#develop"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

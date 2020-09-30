@@ -1,12 +1,12 @@
-import * as DockerName from 'docker-names';
 import {BaseUtils} from 'phovea_core';
+import {SecurityStoreGeneratedRest} from '../rest';
 
 export class LoginCredentials {
-  static create(_menu: HTMLElement, dialog: HTMLElement) {
+  static async create(_menu: HTMLElement, dialog: HTMLElement) {
     // generate random username
     const cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)randomCredentials\s*=\s*([^;]*).*$)|^.*$/, '$1');
 
-    let username = DockerName.getRandomName();
+    let username = await SecurityStoreGeneratedRest.getGeneratedUsername();
     let password = BaseUtils.randomId(6);
     if (cookieValue) {
       // restore old value

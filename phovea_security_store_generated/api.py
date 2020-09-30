@@ -24,7 +24,7 @@ def get_generated_username():
   new_username = f"{pydng.generate_name()}_{random_id(1)}"
 
   if(username_exists(new_username)):
-      _log.info(F"Genereted user {new_username} already exists. Retrying...")
+      _log.info(F"Generated user {new_username} already exists. Retrying...")
       return get_generated_username()
 
   return jsonify(new_username)

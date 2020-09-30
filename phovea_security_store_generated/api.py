@@ -7,23 +7,25 @@ _log = logging.getLogger(__name__)
 
 app = Namespace(__name__)
 
+
 def username_exists(username):
   from phovea_server.security import manager
   try:
-    user_id = manager()._load_user('peaceful_jackson').get_id()
+    user_id = manager()._load_user(username).get_id()
     return username == user_id
-  except:
+  except AttributeError:
     return False
 
+
 @app.route('/generated_username')
-def getGeneratedUsername():
+def get_generated_username():
   from phovea_server.util import random_id
 
   new_username = f"{pydng.generate_name()}_{random_id(1)}"
 
   if(username_exists(new_username)):
       _log.info(F"Genereted user {new_username} already exists. Retrying...")
-      return getGeneratedUsername()
+      return get_generated_username()
 
   return jsonify(new_username)
 

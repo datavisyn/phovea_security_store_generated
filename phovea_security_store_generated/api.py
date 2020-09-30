@@ -16,14 +16,14 @@ def username_exists(username):
     return False
 
 @app.route('/generated_username')
-def getGeneratedUser():
+def getGeneratedUsername():
   from phovea_server.util import random_id
-  
+
   new_username = f"{pydng.generate_name()}_{random_id(1)}"
 
   if(username_exists(new_username)):
       _log.info(F"Genereted user {new_username} already exists. Retrying...")
-      return getGeneratedUser()
+      return getGeneratedUsername()
 
   return jsonify(new_username)
 

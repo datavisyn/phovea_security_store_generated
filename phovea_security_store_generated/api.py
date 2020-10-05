@@ -19,9 +19,11 @@ def username_exists(username):
 
 @app.route('/generated_username')
 def get_generated_username():
-  from phovea_server.util import random_id
+  # use additional random integer to increase possible combinations
+  # import random
+  # new_username = f"{pydng.generate_name()}_{random.randint(1, 10)}"
 
-  new_username = f"{pydng.generate_name()}_{random_id(1)}"
+  new_username = pydng.generate_name() # 108 adjectives * 237 lastnames = 25.596 combinations
 
   if(username_exists(new_username)):
       _log.info(F"Generated user {new_username} already exists. Retrying...")

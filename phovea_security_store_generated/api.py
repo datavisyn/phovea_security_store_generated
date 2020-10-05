@@ -23,7 +23,7 @@ def get_generated_username():
   # import random
   # new_username = f"{pydng.generate_name()}_{random.randint(1, 10)}"
 
-  new_username = pydng.generate_name() # 108 adjectives * 237 lastnames = 25.596 combinations
+  new_username = pydng.generate_name()  # 108 adjectives * 237 lastnames = 25.596 combinations
 
   if(username_exists(new_username)):
       _log.info(F"Generated user {new_username} already exists. Retrying...")

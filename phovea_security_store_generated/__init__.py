@@ -15,8 +15,8 @@ def phovea(registry):
   # generator-phovea:begin
 
   registry.append('namespace', 'phovea_security_store_generated_api', 'phovea_security_store_generated.api', {
-          'namespace': '/api/tdp/security_store_generated'
-      })
+      'namespace': '/api/tdp/security_store_generated'
+  })
 
   registry.append('user_stores', 'phovea_security_store_generated_store', 'phovea_security_store_generated.store', {})
   # generator-phovea:end

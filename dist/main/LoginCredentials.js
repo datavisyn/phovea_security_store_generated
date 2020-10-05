@@ -6,7 +6,6 @@ export class LoginCredentials {
         const cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)randomCredentials\s*=\s*([^;]*).*$)|^.*$/, '$1');
         let username;
         let password;
-        console.log(cookieValue);
         if (cookieValue) {
             // restore old value
             [username, password] = cookieValue.split('@');

@@ -8,7 +8,6 @@ export class LoginCredentials {
 
     let username;
     let password;
-    console.log(cookieValue);
 
     if (cookieValue) {
       // restore old value

@@ -1,7 +1,7 @@
 {
   "name": "phovea_security_store_generated",
   "description": "",
-  "version": "8.0.2-SNAPSHOT",
+  "version": "9.0.0",
   "author": {
     "name": "datavisyn GmbH",
     "email": "contact@datavisyn.io",
@@ -69,7 +69,7 @@
     "docker_packages.txt"
   ],
   "dependencies": {
-    "phovea_security_flask": "github:phovea/phovea_security_flask#develop"
+    "phovea_security_flask": "^release-7.0.0"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

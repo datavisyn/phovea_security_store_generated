@@ -88,6 +88,11 @@ INSERT INTO user(username, password, salt, roles, creation_date, last_login_date
     return next((u for u in self._users if u.id == id), None)
 
   def load_from_key(self, api_key):
+    try:
+      api_key = api_key.decode()  # Convert to string if bytes-like
+    except (UnicodeDecodeError, AttributeError):
+      pass
+
     parts = api_key.split(':')
     if len(parts) != 2:
       return None

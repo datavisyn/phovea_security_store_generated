@@ -69,7 +69,7 @@
     "docker_packages.txt"
   ],
   "dependencies": {
-    "phovea_security_flask": "github:phovea/phovea_security_flask#release-7.0.0"
+    "phovea_security_flask": "^7.0.0"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

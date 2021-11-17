@@ -3,7 +3,7 @@
  * Copyright (c) The Caleydo Team. All rights reserved.
  * Licensed under the new BSD license, available at http://caleydo.org/license
  **************************************************************************** */
-import {IRegistry} from 'phovea_core';
+import {IRegistry} from 'tdp_core';
 
 //register all extensions in the registry following the given pattern
 export default function (registry: IRegistry) {

@@ -1,4 +1,4 @@
-import {BaseUtils} from 'phovea_core';
+import {BaseUtils} from 'tdp_core';
 import {SecurityStoreGeneratedRest} from '../rest';
 
 export class LoginCredentials {

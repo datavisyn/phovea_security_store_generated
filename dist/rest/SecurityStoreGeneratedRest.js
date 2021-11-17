@@ -1,4 +1,4 @@
-import { AppContext } from 'phovea_core';
+import { AppContext } from 'tdp_core';
 export class SecurityStoreGeneratedRest {
     static getGeneratedUsername() {
         return AppContext.getInstance().getAPIJSON('/tdp/security_store_generated/generated_username');

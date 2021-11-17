@@ -1,4 +1,4 @@
-import {AppContext} from 'phovea_core';
+import {AppContext} from 'tdp_core';
 
 export class SecurityStoreGeneratedRest {
     static getGeneratedUsername(): Promise<string> {

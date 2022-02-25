@@ -1,5 +1,5 @@
-import {BaseUtils} from 'tdp_core';
-import {SecurityStoreGeneratedRest} from '../rest';
+import { BaseUtils } from 'tdp_core';
+import { SecurityStoreGeneratedRest } from '../rest';
 
 export class LoginCredentials {
   static async create(_menu: HTMLElement, dialog: HTMLElement) {
@@ -12,7 +12,6 @@ export class LoginCredentials {
     if (cookieValue) {
       // restore old value
       [username, password] = cookieValue.split('@');
-
     } else {
       // request new username and generate new password
       username = await SecurityStoreGeneratedRest.getGeneratedUsername();

@@ -4,6 +4,7 @@
     "target": "ES2019",
     "importHelpers": true,
     "sourceMap": true,
+    "declarationMap": true,
     "declaration": true,
     "moduleResolution": "node",
     "jsx": "react",

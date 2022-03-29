@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := help
-pkg_src = $(shell pwd)
+pkg_src = phovea_security_store_generated
 
 flake8 = flake8 $(pkg_src)
 isort = isort $(pkg_src)

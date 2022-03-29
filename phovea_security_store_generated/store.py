@@ -40,20 +40,8 @@ def ensure_dir(path):
 
 
 class FakeUser(tdp_core.security.model.User):
-    def __init__(self, id, password, salt, roles):
-        super(FakeUser, self).__init__(id)
-        self.name = id
-        self.password = password
-        self.salt = salt
-        self.roles = roles
-
-    @property
-    def is_authenticated(self):
-        return True
-
-    @property
-    def is_active(self):
-        return True
+    password: str
+    salt: str
 
     def is_password(self, given):
         given_h = hash_password(given, self.salt)
@@ -64,30 +52,35 @@ class FakeStore(object):
     def __init__(self):
         self._config = get_settings()
         ensure_dir(self._config.file)
-        self._db = sqlite3.connect(self._config.file)
-        self._db.execute(
+        db = self.get_db()
+        db.execute(
             """CREATE TABLE IF NOT EXISTS user (username TEXT, password TEXT, salt TEXT, roles TEXT, creation_date TEXT, last_login_date TEXT)"""
         )
-        self._db.commit()
+        db.commit()
 
         self._users = list(self._load_users())
 
+    def get_db(self):
+        return sqlite3.connect(self._config.file)
+
     def _load_users(self):
-        for row in self._db.execute("""SELECT username, password, salt, roles FROM user"""):
-            yield FakeUser(row[0], row[1], row[2], row[3].split(";"))
+        for row in self.get_db().execute("""SELECT username, password, salt, roles FROM user"""):
+            yield FakeUser(id=row[0], name=row[0], password=row[1], salt=row[2], roles=row[3].split(";"))
 
     def _flag_logged_in(self, user):
-        self._db.execute("""UPDATE user SET last_login_date = date('now') WHERE username = ?""", (user.name,))
-        self._db.commit()
+        db = self.get_db()
+        db.execute("""UPDATE user SET last_login_date = date('now') WHERE username = ?""", (user.name,))
+        db.commit()
 
     def _persist_user(self, user):
-        self._db.execute(
+        db = self.get_db()
+        db.execute(
             """
 INSERT INTO user(username, password, salt, roles, creation_date, last_login_date) VALUES(?,?,?,?,date('now'),date('now'))
 """,
             (user.name, user.password, user.salt, ";".join(user.roles)),
         )
-        self._db.commit()
+        db.commit()
 
     def logout(self, user):
         pass
@@ -130,7 +123,7 @@ INSERT INTO user(username, password, salt, roles, creation_date, last_login_date
     def _add_user(self, username, password):
         salt = uuid.uuid4().hex
         hashed_password = hashlib.sha512((password + salt).encode("utf-8")).hexdigest()
-        user = FakeUser(username, hashed_password, salt, [username])
+        user = FakeUser(id=username, name=username, password=hashed_password, salt=salt, roles=[username])
         self._users.append(user)
         _log.info("registering new user: " + username)
         self._persist_user(user)

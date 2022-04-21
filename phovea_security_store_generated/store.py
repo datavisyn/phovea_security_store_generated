@@ -13,7 +13,8 @@ import sqlite3
 import uuid
 from functools import lru_cache
 
-import tdp_core.security
+from tdp_core.security.model import User
+from tdp_core.security.store.base_store import BaseStore
 
 from .settings import get_settings
 
@@ -39,7 +40,7 @@ def ensure_dir(path):
             raise
 
 
-class FakeUser(tdp_core.security.model.User):
+class FakeUser(User):
     password: str
     salt: str
 
@@ -48,7 +49,7 @@ class FakeUser(tdp_core.security.model.User):
         return given_h == self.password
 
 
-class FakeStore(object):
+class FakeStore(BaseStore):
     def __init__(self):
         self._config = get_settings()
         ensure_dir(self._config.file)
@@ -84,9 +85,6 @@ INSERT INTO user(username, password, salt, roles, creation_date, last_login_date
 
     def logout(self, user):
         pass
-
-    def load(self, id):
-        return next((u for u in self._users if u.id == id), None)
 
     def load_from_key(self, api_key):
         try:

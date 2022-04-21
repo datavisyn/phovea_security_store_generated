@@ -1,14 +1,11 @@
-from pydantic import BaseSettings, Extra
-from tdp_core.settings.model import get_global_settings
+from pydantic import BaseModel
+from tdp_core import manager
 
 
-class PhoveaSecurityStoreGeneratedSettings(BaseSettings):
+class PhoveaSecurityStoreGeneratedSettings(BaseModel):
     # TODO: Have a global datadir settings in tdp_core and extend it here.
     file: str = "/phovea/fakeUsers.db"
 
-    class Config:
-        extra = Extra.allow
-
 
 def get_settings() -> PhoveaSecurityStoreGeneratedSettings:
-    return get_global_settings().phovea_security_store_generated
+    return manager.settings.phovea_security_store_generated

@@ -4,7 +4,7 @@ from tdp_core import manager
 
 class PhoveaSecurityStoreGeneratedSettings(BaseModel):
     # TODO: Have a global datadir settings in tdp_core and extend it here.
-    file: str = "/phovea/fakeUsers.db"
+    file: str = "./fakeUsers.db"
 
 
 def get_settings() -> PhoveaSecurityStoreGeneratedSettings:

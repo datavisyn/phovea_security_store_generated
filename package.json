@@ -1,7 +1,7 @@
 {
   "name": "phovea_security_store_generated",
   "description": "",
-  "version": "11.0.2-SNAPSHOT",
+  "version": "12.0.0",
   "author": {
     "name": "datavisyn GmbH",
     "email": "contact@datavisyn.io",
@@ -70,7 +70,7 @@
     "docker_packages.txt"
   ],
   "dependencies": {
-    "tdp_core": "github:datavisyn/tdp_core#develop"
+    "tdp_core": "^14.0.2"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -1,4 +1,2 @@
 pydng==1.1.2
-markupsafe==2.0.1
--e git+https://github.com/phovea/phovea_server.git@develop#egg=phovea_server
--e git+https://github.com/datavisyn/tdp_core.git@develop#egg=tdp_core
+tdp_core@git+https://github.com/datavisyn/tdp_core.git@develop#egg=tdp_core

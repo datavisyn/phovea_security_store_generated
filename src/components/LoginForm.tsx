@@ -6,7 +6,7 @@ export function LoginForm({ onLogin }: { onLogin: (username: string, password: s
   const { status, user } = useGenerateRandomUser();
   const formRef = useRef<HTMLFormElement>(null);
 
-  return status === 'success' ? (
+  return status === 'error' || status === 'success' ? (
     <form ref={formRef} className="form-signin">
       <div className="mb-3">
         <label className="form-label" htmlFor="login_username">
@@ -17,7 +17,7 @@ export function LoginForm({ onLogin }: { onLogin: (username: string, password: s
           className="form-control"
           id="login_username"
           name="username"
-          defaultValue={user.username}
+          defaultValue={status === 'success' ? user.username : ''}
           placeholder={I18nextManager.getInstance().i18n.t('phovea:security_store_generated.usernamePlaceholder')}
           required
           autoComplete="username"
@@ -34,14 +34,17 @@ export function LoginForm({ onLogin }: { onLogin: (username: string, password: s
           className="form-control"
           id="login_password"
           name="password"
-          defaultValue={user.password}
+          defaultValue={status === 'success' ? user.password : ''}
           placeholder={I18nextManager.getInstance().i18n.t('phovea:security_store_generated.passwordPlaceholder')}
           required
           autoComplete="current-password"
         />
       </div>
-
-      <span className="form-text text-muted">{I18nextManager.getInstance().i18n.t('phovea:security_store_generated.loginInfo')}</span>
+      <span className="form-text text-muted">
+        {status === 'success'
+          ? I18nextManager.getInstance().i18n.t('phovea:security_store_generated.loginInfo')
+          : I18nextManager.getInstance().i18n.t('phovea:security_store_generated.loginInfoOnError')}
+      </span>
       <div className="d-grid gap-2">
         <button
           className="btn btn-primary mt-2"

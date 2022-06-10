@@ -5,6 +5,7 @@
         "password": "Password",
         "passwordPlaceholder": "Password",
         "loginInfo": "A random username and password is generated for you. However, you can use the same username and password next time to continue your work. Your previous username and password are stored as a cookie for your convenience.",
+        "loginInfoOnError": "Please enter a preferred username and password. You can use the same username and password next time to continue your work. Your previous username and password are stored as a cookie for your convenience.",
         "login": "Login"
     }
 }

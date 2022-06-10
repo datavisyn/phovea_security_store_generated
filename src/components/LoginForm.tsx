@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { I18nextManager } from 'tdp_core';
 import { useGenerateRandomUser } from '../hooks/useGenerateRandomUser';
 
 export function LoginForm({ onLogin }: { onLogin: (username: string, password: string) => void }) {
@@ -9,7 +10,7 @@ export function LoginForm({ onLogin }: { onLogin: (username: string, password: s
     <form ref={formRef} className="form-signin">
       <div className="mb-3">
         <label className="form-label" htmlFor="login_username">
-          Username
+          {I18nextManager.getInstance().i18n.t('phovea:security_store_generated.username')}
         </label>
         <input
           type="text"
@@ -17,7 +18,7 @@ export function LoginForm({ onLogin }: { onLogin: (username: string, password: s
           id="login_username"
           name="username"
           defaultValue={user.username}
-          placeholder="User name"
+          placeholder={I18nextManager.getInstance().i18n.t('phovea:security_store_generated.usernamePlaceholder')}
           required
           autoComplete="username"
           autoFocus
@@ -26,7 +27,7 @@ export function LoginForm({ onLogin }: { onLogin: (username: string, password: s
 
       <div className="mb-3">
         <label className="form-label" htmlFor="login_password">
-          Password
+          {I18nextManager.getInstance().i18n.t('phovea:security_store_generated.password')}
         </label>
         <input
           type="text"
@@ -34,16 +35,13 @@ export function LoginForm({ onLogin }: { onLogin: (username: string, password: s
           id="login_password"
           name="password"
           defaultValue={user.password}
-          placeholder="Password"
+          placeholder={I18nextManager.getInstance().i18n.t('phovea:security_store_generated.passwordPlaceholder')}
           required
           autoComplete="current-password"
         />
       </div>
 
-      <span className="form-text text-muted">
-        A random username and password is generated for you. However, you can use the same username and password next time to continue your work. Your previous
-        username and password are stored as a cookie for your convenience.
-      </span>
+      <span className="form-text text-muted">{I18nextManager.getInstance().i18n.t('phovea:security_store_generated.loginInfo')}</span>
       <div className="d-grid gap-2">
         <button
           className="btn btn-primary mt-2"
@@ -55,7 +53,7 @@ export function LoginForm({ onLogin }: { onLogin: (username: string, password: s
             onLogin(formData.get('username') as string, formData.get('password') as string);
           }}
         >
-          Login
+          {I18nextManager.getInstance().i18n.t('phovea:security_store_generated.login')}
         </button>
       </div>
     </form>

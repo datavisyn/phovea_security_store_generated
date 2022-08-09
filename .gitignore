@@ -26,3 +26,4 @@ node_modules/
 /tests/**/*.map 
 *.css
 package-lock.json
+/dist/

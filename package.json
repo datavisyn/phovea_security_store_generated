@@ -48,8 +48,7 @@
     "__main__.py",
     "requirements.txt",
     "requirements_dev.txt",
-    "docker_packages.txt",
-    "dist"
+    "docker_packages.txt"
   ],
   "dependencies": {
     "tdp_core": "git+ssh://git@github.com:datavisyn/tdp_core#visyn_scripts",

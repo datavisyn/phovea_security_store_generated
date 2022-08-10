@@ -4,13 +4,13 @@
  * Licensed under the new BSD license, available at http://caleydo.org/license
  **************************************************************************** */
 
-import {PluginRegistry} from 'tdp_core';
+import { PluginRegistry } from 'tdp_core';
 import reg from './phovea';
 
 /**
  * build a registry by registering all phovea modules
  */
-//other modules
+// other modules
 
-//self
+// self
 PluginRegistry.getInstance().register('phovea_security_store_generated', reg);

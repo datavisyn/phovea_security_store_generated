@@ -27,3 +27,12 @@ node_modules/
 *.css
 package-lock.json
 /dist/
+/yarn.lock
+# yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

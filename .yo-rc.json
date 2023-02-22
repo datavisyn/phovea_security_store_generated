@@ -1,9 +1,7 @@
 {
   "generator-phovea": {
     "type": "lib-slib",
-    "modules": [
-      "tdp_core"
-    ],
+    "modules": [],
     "libraryAliases": {},
     "libraryExternals": [],
     "name": "phovea_security_store_generated",

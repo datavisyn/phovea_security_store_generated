@@ -1,9 +1,9 @@
 from pydantic import BaseModel
-from tdp_core import manager
+from visyn_core import manager
 
 
 class PhoveaSecurityStoreGeneratedSettings(BaseModel):
-    # TODO: Have a global datadir settings in tdp_core and extend it here.
+    # TODO: Have a global datadir settings in visyn_core and extend it here.
     file: str = "./fakeUsers.db"
 
 

@@ -16,7 +16,6 @@
     "type": "git",
     "url": "https://github.com/datavisyn/phovea_security_store_generated.git"
   },
-  "private": false,
   "scripts": {
     "all": "npm run lint:fix && npm run test && npm run build && npm run dist",
     "build": "npm run clean && npm run compile && npm run copy",
@@ -51,8 +50,8 @@
     "docker_packages.txt"
   ],
   "dependencies": {
-    "tdp_core": "git+ssh://git@github.com:datavisyn/tdp_core#develop",
-    "visyn_scripts": "git+ssh://git@github.com/datavisyn/visyn_scripts#develop"
+    "tdp_core": "git+ssh://git@github.com:datavisyn/tdp_core#visyn_core",
+    "visyn_scripts": "git+ssh://git@github.com/datavisyn/visyn_scripts#visyn_core"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -60,7 +59,6 @@
     "npm": ">=8",
     "node": ">=16"
   },
-  "devDependencies": {},
   "visyn": {
     "entries": {
       "app": "./src/index.js"

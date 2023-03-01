@@ -50,8 +50,8 @@
     "docker_packages.txt"
   ],
   "dependencies": {
-    "tdp_core": "git+ssh://git@github.com:datavisyn/tdp_core#visyn_core",
-    "visyn_scripts": "git+ssh://git@github.com/datavisyn/visyn_scripts#visyn_core"
+    "tdp_core": "git+ssh://git@github.com:datavisyn/tdp_core#develop",
+    "visyn_scripts": "git+ssh://git@github.com/datavisyn/visyn_scripts#develop"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

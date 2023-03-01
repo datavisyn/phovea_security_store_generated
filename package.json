@@ -16,7 +16,6 @@
     "type": "git",
     "url": "https://github.com/datavisyn/phovea_security_store_generated.git"
   },
-  "private": false,
   "scripts": {
     "all": "npm run lint:fix && npm run test && npm run build && npm run dist",
     "build": "npm run clean && npm run compile && npm run copy",
@@ -60,7 +59,6 @@
     "npm": ">=8",
     "node": ">=16"
   },
-  "devDependencies": {},
   "visyn": {
     "entries": {
       "app": "./src/index.js"

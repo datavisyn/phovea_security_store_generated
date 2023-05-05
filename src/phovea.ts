@@ -3,7 +3,7 @@
  * Copyright (c) The Caleydo Team. All rights reserved.
  * Licensed under the new BSD license, available at http://caleydo.org/license
  **************************************************************************** */
-import { ILocaleEPDesc, IRegistry, EP_PHOVEA_CORE_LOCALE, PluginRegistry } from 'tdp_core';
+import { ILocaleEPDesc, IRegistry, EP_PHOVEA_CORE_LOCALE, PluginRegistry } from 'visyn_core/plugin';
 
 // register all extensions in the registry following the given pattern
 export default function (registry: IRegistry) {

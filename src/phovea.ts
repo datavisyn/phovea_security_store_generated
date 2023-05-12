@@ -14,7 +14,7 @@ export default function (registry: IRegistry) {
     'securityCustomizedLoginForm',
     'generated',
     function () {
-      return import('./main/LoginCredentials.js').then((l) => l.LoginCredentials);
+      return import('./main/LoginCredentials').then((l) => l.LoginCredentials);
     },
     {
       // eslint-disable-next-line global-require

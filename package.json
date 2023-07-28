@@ -1,7 +1,7 @@
 {
   "name": "phovea_security_store_generated",
   "description": "",
-  "version": "15.0.0",
+  "version": "15.0.1-SNAPSHOT",
   "author": {
     "name": "datavisyn GmbH",
     "email": "contact@datavisyn.io",
@@ -50,8 +50,8 @@
     "docker_packages.txt"
   ],
   "dependencies": {
-    "tdp_core": "^20.1.0",
-    "visyn_scripts": "^4.1.0"
+    "tdp_core": "git+ssh://git@github.com:datavisyn/tdp_core#develop",
+    "visyn_scripts": "git+ssh://git@github.com/datavisyn/visyn_scripts#develop"
   },
   "resolutions": {
     "@types/react": "~18.2.0",

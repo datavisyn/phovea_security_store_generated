@@ -1,5 +1,7 @@
 import React from 'react';
-import { AppContext, BaseUtils, useAsync } from 'tdp_core';
+import { BaseUtils } from 'tdp_core';
+import { AppContext } from 'visyn_core/base';
+import { useAsync } from 'visyn_core/hooks';
 
 export function useGenerateRandomUser() {
   // generate random username

@@ -10,7 +10,7 @@
 from typing import Type
 
 from pydantic import BaseModel
-from tdp_core.plugin.model import AVisynPlugin, RegHelper
+from visyn_core.plugin.model import AVisynPlugin, RegHelper
 
 from .settings import PhoveaSecurityStoreGeneratedSettings
 

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { I18nextManager } from 'tdp_core';
+import { I18nextManager } from 'visyn_core/i18n';
 import { useGenerateRandomUser } from '../hooks/useGenerateRandomUser';
 
 export function LoginForm({ onLogin }: { onLogin: (username: string, password: string) => void }) {

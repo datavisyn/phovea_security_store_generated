@@ -1,4 +1,4 @@
-import { AppContext } from 'tdp_core';
+import { AppContext } from 'visyn_core/base';
 
 export class SecurityStoreGeneratedRest {
   static getGeneratedUsername(): Promise<string> {

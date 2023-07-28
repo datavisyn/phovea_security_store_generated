@@ -13,8 +13,8 @@ import sqlite3
 import uuid
 from functools import lru_cache
 
-from tdp_core.security.model import User
-from tdp_core.security.store.base_store import BaseStore
+from visyn_core.security.model import User
+from visyn_core.security.store.base_store import BaseStore
 
 from .settings import get_settings
 

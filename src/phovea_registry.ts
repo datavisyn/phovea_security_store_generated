@@ -11,6 +11,7 @@ import reg from './phovea';
  * build a registry by registering all phovea modules
  */
 // other modules
+import 'tdp_core/dist/phovea_registry';
 
 // self
 PluginRegistry.getInstance().register('phovea_security_store_generated', reg);

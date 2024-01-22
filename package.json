@@ -49,8 +49,8 @@
     "docker_packages.txt"
   ],
   "dependencies": {
-    "tdp_core": "git+ssh://git@github.com:datavisyn/tdp_core#develop",
-    "visyn_scripts": "git+ssh://git@github.com/datavisyn/visyn_scripts#develop"
+    "tdp_core": "^23.0.1",
+    "visyn_scripts": "^7.0.1"
   },
   "resolutions": {
     "@types/react": "~18.2.0",

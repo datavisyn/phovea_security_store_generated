@@ -27,7 +27,7 @@ node_modules/
 *.css
 package-lock.json
 /dist/
-/yarn.lock
+!yarn.lock
 # yarn
 .pnp.*
 .yarn/*

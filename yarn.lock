@@ -13530,7 +13530,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "phovea_security_store_generated@workspace:."
   dependencies:
-    tdp_core: ^23.0.1
+    tdp_core: ^23.0.2
     visyn_scripts: ^7.0.1
   languageName: unknown
   linkType: soft
@@ -16881,9 +16881,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tdp_core@npm:^23.0.1":
-  version: 23.0.1
-  resolution: "tdp_core@npm:23.0.1"
+"tdp_core@npm:^23.0.2":
+  version: 23.0.2
+  resolution: "tdp_core@npm:23.0.2"
   dependencies:
     "@popperjs/core": ^2.9.3
     "@swc/jest": ^0.2.24
@@ -16915,9 +16915,9 @@ __metadata:
     select2: ~4.0.13
     select2-bootstrap-theme: 0.1.0-beta.9
     use-deep-compare-effect: ^1.8.0
-    visyn_core: ^7.0.0
+    visyn_core: ^7.0.3
     visyn_scripts: ^7.0.1
-  checksum: 7eb8d90b1b131c93160c2c50816279a6e25039f1f489774046881e8b12b30418a98538c568bfcfd9fe6256462f7882a4da3508b0bcca6cd92e7570d474858cb9
+  checksum: 24ceabc4f4429f93efa2fe0f7e5f9233461d0c1d0afc8fbd827b167521fb9fbd1ec3ae1ca4757a809299e2ace951284fafe47c9a31ae0205300a0092876de348
   languageName: node
   linkType: hard
 
@@ -17781,9 +17781,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"visyn_core@npm:^7.0.0":
-  version: 7.0.1
-  resolution: "visyn_core@npm:7.0.1"
+"visyn_core@npm:^7.0.3":
+  version: 7.0.4
+  resolution: "visyn_core@npm:7.0.4"
   dependencies:
     "@emotion/react": ^11.9.3
     "@fortawesome/fontawesome-free": ^6.1.1
@@ -17822,7 +17822,7 @@ __metadata:
     react-spring: ^9.7.1
     use-deep-compare-effect: ^1.8.0
     visyn_scripts: ^7.0.1
-  checksum: 605a96909218b880860c901e3f6cfcd3f7d95fa4106b163bc08f0ab1b5b8df1ae0ca0fbb5b8cf3a6548cbe0c5d5c1c011910f16984e632cce73d64efea0f5ac3
+  checksum: e65c4ba461647df586102be104dee4b4212247ceb6c4fee44739894c2b462dc0dd0e4e49522f8ad160d57ffa10b7da06b36d8f8a4dec4cbb03f4bde716edf1f3
   languageName: node
   linkType: hard
 

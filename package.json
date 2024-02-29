@@ -49,7 +49,7 @@
     "docker_packages.txt"
   ],
   "dependencies": {
-    "tdp_core": "^23.0.1",
+    "tdp_core": "^23.0.2",
     "visyn_scripts": "^7.0.1"
   },
   "resolutions": {
